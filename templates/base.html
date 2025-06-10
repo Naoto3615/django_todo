@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja" class="antialiased bg-gray-100 text-gray-800">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}TODOアプリ{% endblock %}</title>
+  <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- ナビゲーションバー -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="{% url 'list' %}" class="text-2xl font-bold text-blue-600 hover:text-blue-800">My TODO</a>
+      <div>
+        <a href="{% url 'list' %}" class="px-4 py-2 rounded-md text-gray-700 hover:bg-blue-100">一覧</a>
+        <!-- 必要に応じて他リンクも追加可 -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-6 py-8 flex-grow">
+    {% block content %}a{% endblock %}
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-white border-t mt-auto">
+    <div class="container mx-auto px-6 py-4 text-center text-sm text-gray-600">
+      &copy; 2025 My TODO App. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
