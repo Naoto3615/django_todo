@@ -12,3 +12,5 @@ class TodoDetail(DetailView):
     template_name = 'detail.html'
     model = TodoModel
 
+class TodoCreate(CreateView):
+    template_name = 'create.html'
