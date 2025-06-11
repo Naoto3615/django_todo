@@ -7,7 +7,7 @@
     <div class="flex justify-end space-x-4">
       <a href="{% url 'list' %}" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100">一覧に戻る</a>
       <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">編集</a>
-              <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">削除</a>
+              <a href="{% url 'delete' object.pk %}" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">削除</a>
     </div>
   </div>
 {% endblock %}
